@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Doyeon Guk"
 description              : "A smol programming blog to record my day to day learning!"
 url                      : "https://Jenguk42.github.io"
-baseurl                  : "/Jenguk42"
+baseurl                  : # "/Jenguk42"
 repository               : "Jenguk42/jenguk42.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
