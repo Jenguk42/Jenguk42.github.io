@@ -23,7 +23,7 @@ name                     : "Doyeon Guk"
 description              : "A smol programming blog to record my day to day learning!"
 url                      : "https://jenguk42.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "https://github.com/jenguk42/jenguk42.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -104,14 +104,14 @@ analytics:
 author:
   name             : "Doyeon Guk"
   avatar           : "/assets/images/profile-pic.jpg"
-  bio              : "I am Doyeon Guk, currently studying Computer Science in University of Melbourne, Australia.
-  I blog about my daily improvements, and sometimes some personal thoughts!"
+  bio              : "Hi! I am Doyeon Guk, currently studying Computer Science in University of Melbourne, Australia.
+  <br>I blog about my daily improvements, and sometimes some personal thoughts!"
   location         : "Seoul, Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: mailto:doyeonguk42@email.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -123,7 +123,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/jenguk42"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -289,3 +289,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+    # _pages
+    - scope:
+        path: "_pages"
+        type: pages
+      values:
+        layout: single
+        author_profile: true
