@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "Category"
-    url: "https://jenguk42.github.io/categories/"
+  - title: "Categories"
+    url: /categories/
   - title: "Today I Learned"
-    url: "https://jenguk42.github.io/categories/TIL/"
+    url: /categories/TIL/
+  - title: "JavaScript"
+    url: /categories/JS/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

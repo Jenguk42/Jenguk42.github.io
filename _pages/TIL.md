@@ -1,9 +1,8 @@
 ---
 title: "Today I Learned"
+layout: categories
 permalink: /categories/TIL/
-layout: category
 author_profile: true
-taxonomy: TIL
 ---
 
 These are the daily records of my learning process.
