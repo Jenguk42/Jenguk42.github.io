@@ -7,7 +7,9 @@ categories:
 ---
 ###### ✒ Reference: [Introduction - JavaScript by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction)
 
-## What is JavaScript?
+
+
+## What is JavaScript? 
 
 - A **cross-platform, object-oriented scripting language** to make webpages interactive
 - Connects the objects of its environment to provide programmatic control inside a host environment.
@@ -29,7 +31,7 @@ categories:
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Object-oriented. No distinction between types of objects. Inheritance is through the prototype mechanism, and properties and methods can be added to any object dynamically. | Class-based. Objects are divided into classes and instances with all inheritance through the class hierarchy. Classes and instances cannot have properties or methods added dynamically. |
 | Variable data types are not declared (dynamic typing, loosely typed). | Variable data types must be declared (static typing, strongly types). |
-| Cannot automaticall write to hard disk.                      | Can automatically write to hard disk.                        |
+| Cannot automatically write to hard disk.                     | Can automatically write to hard disk.                        |
 
 ---
 
@@ -59,5 +61,4 @@ categories:
   ```
 
   - `(function(){"use strict";` prevents semantics in JavaScript, and prevents code snippets executed in the console from interacting with one-another
-
 
