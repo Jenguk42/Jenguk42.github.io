@@ -1,12 +1,15 @@
 ---
-title: "Labeled Statement"
+title: "Statements"
 
 categories:
 - JS
 
 ---
 ###### ✒ Reference: [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration) from the Mozilla JavaScript Guide.
-# `labeled` statement
+
+
+
+## `labeled` statement
 
 - Provides a statement with an identifier; can be used to identify a loop, then `break` or `continue` statements 
 
@@ -58,7 +61,9 @@ checkiandj:
   }
 ```
 
-# `for...of` vs `for...in`
+
+
+## `for...of` vs `for...in`
 
 - `for...of` statement creates a loop Iterating over iterable objects (including `Array`, `Map`, `Set`, `arguments` object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - `for...in` statement iterates a specified variable over all the enumerable properties of an object.
@@ -78,4 +83,3 @@ for (let i of arr) {
    console.log(i); // logs 3, 5, 7
 }
 ```
-

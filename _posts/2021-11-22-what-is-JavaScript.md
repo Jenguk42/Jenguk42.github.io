@@ -41,24 +41,24 @@ categories:
 
 - Every time something is entered into the console, it is actually surrounded by `console.log` around `eval`
 
-  ``` javascript
-  console.log(eval('3 + 5'))
-  ```
+``` javascript
+console.log(eval('3 + 5'))
+```
 
 - My first "Hello world" JS code!
 
-  ``` javascript
-  (function(){
-    "use strict";
-    /* Start of your code */
-    function greetMe(yourName) {
-      alert('Hello ' + yourName);
-    }
-  
-    greetMe('World');
-    /* End of your code */
-  })();
-  ```
+``` javascript
+(function(){
+"use strict";
+/* Start of your code */
+function greetMe(yourName) {
+alert('Hello ' + yourName);
+}
 
-  - `(function(){"use strict";` prevents semantics in JavaScript, and prevents code snippets executed in the console from interacting with one-another
+greetMe('World');
+/* End of your code */
+})();
+```
+
+- `(function(){"use strict";` prevents semantics in JavaScript, and prevents code snippets executed in the console from interacting with one-another
 

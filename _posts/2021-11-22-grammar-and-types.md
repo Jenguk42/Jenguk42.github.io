@@ -8,7 +8,9 @@ categories:
 ###### ✒ Reference: [Grammar and types - JavaScript Guide by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types)
 ###### I have excluded the syntax that are identical to those of Java.
 
-# Basics
+
+
+## Basics
 
 - JS is case-sensitive and uses the Unicode character set.
 - Instructions are called **statements** and are separated by semicolons.
@@ -22,6 +24,7 @@ categories:
 // hashbang comment: specifies the path to a particular JS engine that should execute the script
 ```
 
+
 # Declarations 
 
 ## 3 kinds of variable declarations
@@ -29,8 +32,6 @@ categories:
 2. **let**: Declares a **block-scoped, local variable**, optionally initializing it to a value.
 3. **const**: Declares a  **block-scoped, read-only** named constant.
    - If the keywords are omitted, the identifier is assumed to represent a variable.
-
----
 
 
 ## Variables
@@ -55,7 +56,6 @@ if (true) {
 console.log(y);  // ReferenceError: y is not defined
 ```
 
----
 
 ## Evaluating variables
 
@@ -64,7 +64,6 @@ console.log(y);  // ReferenceError: y is not defined
 - Can be used to determine whether a variable has a value
 - boolean context: `false`; numeric context: `NaN` (`null`: boolean context `false`; numeric context `0`)
 
----
 
 ## Variable hoisting
 - Hoisting: Referring to a variable declared later w/o getting an exception
@@ -77,7 +76,6 @@ console.log(x === undefined); // true
 var x = 3;
 ```
 
----
 
 ## Function hoisting
 
@@ -97,14 +95,13 @@ console.log('bar2');
 };
 ```
 
----
 
-  ## Global variables
+## Global variables
 
 - In web pages, the global object is `window`. 
 - Global variables can be accessed by `window.variable`, or specifying the `window` or `frame` name. (`windowName.varName`)
 
----
+
 
 ## Constants
 
@@ -122,6 +119,8 @@ MY_ARRAY.push('JAVASCRIPT');
 console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 ```
 
+
+
 # Data structures and types
 
 ## Data types
@@ -129,13 +128,11 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 - 7 primitive data types: Boolean, null, undefined (a top-level property whose value is not defined), Number (integer/ floating point number), BigInt (an integer with arbitrary precision, i.e. `9007727422n`), String, Symbol (a data type whose instances are unique and immutable)
 - and Object (named containers for values)
 
----
 
 ## Data type conversion
 
 - JS is a dynamically typed language: data types are automatically converted
 
----
 
 ## Numbers and the '+' operator
 
@@ -146,7 +143,6 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 '37' + 7 // "377"
 ```
 
----
 
 ## Converting strings to numbers
 
@@ -158,6 +154,8 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 parseInt('101', 2) //5
 (+'1.1') + (+'1.1') //2.2
 ```
+
+
 
 # Literals
 
