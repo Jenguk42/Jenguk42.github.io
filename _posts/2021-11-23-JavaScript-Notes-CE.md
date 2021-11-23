@@ -1,19 +1,19 @@
 ---
-title: "JavaScript - 생활 코딩"
+title: "JavaScript - CE"
 
 categories:
 - JS
 
 ---
 
-###### ✒ 본 노트는 [생활 코딩 블로그의 JavaScript 강의](https://opentutorials.org/course/3085) 를 토대로 작성되었습니다. 
+###### ✒ This note is created based on: [JavaScript tutorial by 'Coding Everybody'](https://opentutorials.org/course/3085). 
 
 
 
-## Basics
+## JavaScript Basics
 
-- JS는 HTML을 제어하는 언어이다.
-- 브라우저는 한 번 출력되면 자신을 바꿀 수 있는 능력이 없다.  → JS 코드를 이용해 브라우저와 상호 작용할 수 있다.
+- JS is a programming language that controls HTML.
+- A browser cannot change itself once it is printed on screen  → We can interact with the user via JS.
 - i.e. night to day button
 ```html
 <input type="button" value="night" onclick="
@@ -21,69 +21,73 @@ categories:
     document.querySelector('body').style.color='white';
     ">
 ```
-- onclick 속성이 위치한 버튼을 클릭했을 때 실행 시킬 자바스크립트 코드
-- body tag의 style이 달라짐 (CSS 코드가 바뀜)
+- The JS code in red is run when the button with the `onclick` property is clicked.
+- We can change the style of body tag (change the CSS code)
 
 
 
 ## script tag
 
-- JS를 사용하는 법: html에게 "지금부터 js를 시작합니다!" 하고 알려줘야 함
-- `<script>`와 `</script>` 안에 있는 코드를 웹 브라우저가 js로 인식
+- We need to inform `html` that we will start using JS: how?
+- The code between `<script>` and `</script>` are recognized as JS by the browser
 
 ``` html
 <h1>JScode</h1>
 <script> 
-    document.write(1+1); <!-- javascript를 이용해 html을 바꿈 --> 
+    document.write(1+1); <!-- Changed the html using javascript --> 
 </script>
 ```
-> JS: 동적 (1+1을 2로 바꿈) 
+> JS: dynamic content (changed 1+1 to 2) 
 
 ``` html
 <h1>html</h1>
-1+1 <!-- html 자체를 바꿨음 -->
+1+1 <!-- changed the html itself -->
 ```
-> html: 정적 (1+1을 그대로 출력함)
+> html: static content
 
 
 
 ## event
 
-- 사용자의 반응에 따라 웹 브라우저에서 일어나는 사건 (`on`으로 시작)
-- event를 이용하여 **사용자와 상호작용하는 웹 페이지**를 만들 수 있음
-- 웹브라우저가 event의 속성값 (반드시 JS가 와야 함)을 기억하고 있다가, event가 일어날 경우 기억해둔 JS 코드를 JS의 문법에 따라 해석하여 실행
+- JavaScript's interaction with HTML is handled through **events** that occur when **the user or the browser manipulates a page** 
+- Event types mostly start with `on`
+- We can make an interactive page using javaScript layered on html
+- Many DOM elements can be set up to accept (or "listen" for) these events, and execute code in response to process (or "handle") them.
 
 ``` html
 <input type="button" value="create alert" onclick="alert('hi')">
 ```
->  `onclick`: 클릭했을 경우 event를 실행
+>  `onclick`: Triggers on a mouse click
 
 ``` html
 <input type="text" onchange="alert('changed')">
 ```
-> `onchange`: 입력값이 달라졌을 경우 event를 실행
+> `onchange`: Triggers when an element changes
 
 ``` html
 <input type="text" onkeydown="alert('key down!')">
 ```
-> `onkeydown`: key를 눌렀을 경우 event를 실행
+> `onkeydown`: Triggers when a key is pressed
 
 
 
-## console
+## Console
 
-- Inspect → Console (Inspect → Elements에서 esc)
-- html 파일을 새로 만드는 대신 chrome 페이지에서 JS 코드를 즉석으로 실행시킬 수 있음
-- 콘솔에서 실행시키는 JS는 해당 웹 페이지를 대상으로 실행됨 (페이지 안에 삽입된 JS처럼 동작)
-- 편리하고 유용함 (나의 필요에 따라 이미 만들어진 웹사이트와 관련된 데이터를 처리할 수 있음)
+- Inspect → Console / Inspect → esc on Elements
+- You can directly execute a piece of JS code on chrome 
+- You can run JS in the Console to interact with the page (can also work with any arbitary JS)
+- Convenient!
+  - No need to create a new html file 
+  - Can work with data on any web page to suit your needs
 
 
 
-## CSS 기초
 
-- style 속성을 이용해서 CSS를 사용해 디자인을 바꿀 수 있음
-  - JS와 완전히 다른 언어
-  - (검색해서 문제 해결: i.e. CSS background color property)
+## CSS Basics
+
+- You can change the design of a browser using the style attribute and CSS
+  - Completely different from JS
+  - Google it whenever you need it! i.e. CSS background color property
 
 ```html
 <h2 style="background-color:coral;
@@ -92,11 +96,11 @@ categories:
 </h2>
 ```
 
-- style 태그를 이용해 CSS를 사용할 수 있음
-  - `<div> </div>`: 의미와 기능은 없지만 CSS 또는 JS를 통해서 어떤 정보를 제어하고 싶을 때 사용 (줄바꿈)
-  - `<span> </span>`: 같은 작용, 줄바꿈 없음
-- `head` 태그 속에 `style`이라는 html 코드를 넣음
-  - `<script></script>` 태그처럼 태그 속 내용이 CSS라는 것을 웹 브라우저에게 알려주는 구분자
+- The `style` element contains style information for a document, or part of a document. It contains CSS.
+  - `<div> </div>`: Block-level organization and styling of page elements (line break placed by default)
+  - `<span> </span>`: Inline organization and styling (no line break)
+  - Both defines a division or a section in an HTML document, which can be styled with CSS or manipulated by JS
+-  `<style></style>` is a delimiter that tells the browser that the content within is written in CSS (just like `<script></script>` for JS)
 
 ```html
 <html>
@@ -104,13 +108,13 @@ categories:
     <style>
       #first{
         color:green;
-      } /*웹페이지 내에서 **id** 값이 first인 모든 태그의 색을 green으로 바꿈*/
+      } /*Change the color of all content within the page where **id** of the tag is first*/
       .js{
       	color:red;
-      } /*웹페이지 내에서 **class** 값이 js인 모든 태그의 색을 red로 바꿈*/
+      } /*Change the color of all content within the page where **class** of the tag is js*/
       span{
         color:blue;
-      } /*웹페이지 내의 모든 span 태그의 색을 blue로 바꿈
+      } /*Change the color of all <span> elements within the page*/
     </style> 
   </head>
   <body>
@@ -118,31 +122,158 @@ categories:
     <h2>JavaScript</h2>
       <p>
       <span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside <span>HTML</span> and <span>CSS</span>, <span class="js"></span>JavaScript</span> is one of the three core technologies of World Wide Web content production.
-      </p> <!-- 첫번째 JavaScript: green, 나머지 JavaScript: red, HTML과 CSS: blue-->
+      </p> <!-- First 'JavaScript': green, The rest: red, 'HTML' and 'CSS': blue-->
   </body>
 </html>
 ```
 
-- 선택자 `span` vs `class` vs `id`
-  - 우선 순위: `id` → `class` → `span`
-  - `class`: 무언가를 grouping하고 싶을 떄 같은 이름의 class로 지정 (더 포괄적)
-  - `id`: 어떤 한가지 대상을 식별함, 해당 페이지 내에서 같은 id를 두 번 이상 쓸 수 없음 (예외 처리)
+- Selectors `span` vs `class` vs `id`
+  - Priority: `id` → `class` → `span`
+  
+  - Used by CSS and JavaScript to select and access specific elements
 
-
-- 제어할 태그 선택하기
+  - `class`
+  
+    - Used to specify a **class** for an HTML element
+    - Can be used by multiple HTML elements
+  
+  - `id`
+  
+    - Used to specify a **unique id** for an HTML element
+    - Must be unique within the HTML document ()
+  
+    
+  
+- Selecting a tag to manipulate
 ```html
 <html>
 <body>
 	<h1><a href="index.html">WEB</a></h1>
     <input type="button" value="night" onclick="
-                                                document.querySelector('body').style.backgroundColor = 'black';
-                                                document.querySelector('body').style.color = 'white';
-                                                "> <!-- 바디 태그를 선택해 JS를 이용하여 DOM에 속한 요소들의 색을 바꿈 -->
+	document.querySelector('body').style.backgroundColor = 'black';
+	document.querySelector('body').style.color = 'white';
+	"> <!-- 'body' element is selected to change the colors (using JS) -->
     <input type="button" value="day" onclick="
-                                              document.querySelector('body').style.backgroundColor = 'white';
-                                              document.querySelector('body').style.color = 'black';
-                                              ">
+	document.querySelector('body').style.backgroundColor = 'white';
+	document.querySelector('body').style.color = 'black';
+	">
 	<p> ... </p>
 </body>
 </html>
+```
+
+
+
+## Application of conditional statements
+
+- Changing the text/background color with respect to the `value`of `#nightday` button
+- `if...else` statement can be used instead of using two buttons
+
+```html
+<h1><a href="index.html">WEB</a></h1>
+<input id="night_day" type="button" value="night" onclick=""> 
+	<!--- The JS below goes here --->
+<ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+</ol>
+<h2>JavaScript</h2>
+<p> ... </p>
+```
+
+```javascript
+if (document.querySelector('#night_day').value === 'night') {
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day').value = 'day';
+} else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#night_day').value = 'night';
+}
+```
+
+
+## Refactoring
+
+- Always refactor to increase readability and efficiency of the code!
+
+```javascript
+var target = document.querySelector('body');
+if (this.value === 'night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+} else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+}
+```
+
+- If the code within an event refers to itself, call it `this`
+- `document.querySelector('body').style` is cloned -> set `target` as a `var` and reuse it
+
+
+
+## Application of arrays and iteration
+
+- Adding the elements of an array by iterating through it
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <h1>Loop and Array</h1>
+    <script>
+        let coworkers = ['laeSion', 'cheolSoo', 'yeongWoo', 'doYeon'];
+    </script>
+    <h2>Co-workers</h2>
+    <ul>
+<!--        <li>laeSion</li>-->
+<!--        <li>cheolSoo</li>-->
+<!--        <li>yeongWoo</li>-->
+<!--        <li>doYeon</li>-->
+        <script>
+            let i = 0;
+            while(i < coworkers.length) {
+                document.write('<li>' + coworkers[i] + '</li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>
+</body>
+</html>
+```
+
+- Applying the concept to the button example
+```javascript
+var target = document.querySelector('body');
+var links = document.querySelectorAll('a');
+
+if (this.value === 'night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+
+	var i = 0;
+    while (i<links.length) {
+        links[i].style.color = 'powderblue';
+        i=i+1;
+    } 
+} else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+	
+	var i = 0;
+    while (i<links.length) {
+        links[i].style.color = 'powderblue';
+        i=i+1;
+    } 
+}
 ```
