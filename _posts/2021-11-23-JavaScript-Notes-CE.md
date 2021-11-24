@@ -299,3 +299,110 @@ if (this.value === 'night') {
 
 - .querySelector(): gets the first element by CSS selector
 - .querySelectorAll(): gets all elements (in an array) with the corresponding CSS selector 
+
+
+
+## Application of functions
+
+- JavaScript function: a block of code designed to perform a particular task
+- Executed when something invokes the function (event driven, called from JS, or self invoked)
+- It is a good idea to create a function to set a name to a certain logic
+
+```javascript
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+```
+
+- Adding a function to refactor the JS within html body
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Refactoring via functions</title>
+    <script>
+        function nightDayHandler(self) {
+            let target = document.querySelector('body');
+            let links = document.querySelectorAll('a');
+
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+                let i = 0;
+                while (i < links.length) {
+                    links[i].style.color = 'powderblue';
+                    i = i + 1;
+                }
+
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+                let i = 0;
+                while (i < links.length) {
+                    links[i].style.color = 'blue';
+                    i = i + 1;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+    "> <!-- 'this' refers to the input button -->
+
+    <ol >
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+    </ol>
+
+    <h2>JavaScript</h2>
+    <p> ... </p>
+</body>
+</html>
+```
+
+
+
+## Objects
+- 'A storage box used to group and organize the functions and variables that are related to each other'
+- An object can be thought of as a file directory
+- A function for an object is called a method
+
+```javascript
+if (self.value === 'night') {
+    setBodyBackgroundColor('black');
+    setBodyColor('white');
+    self.value = 'day';
+
+    setLinksColor('powderblue');
+} else {
+    setBodyBackgroundColor('white');
+    setBodyColor('black');
+    self.value = 'night';
+
+    setLinksColor('blue');
+}
+```
+
+```javascript
+if (self.value === 'night') {
+    body.setBackgroundColor('black');
+    body.setColor('white');
+    self.value = 'day';
+
+    setLinksColor('powderblue');
+} else {
+    body.setBackgroundColor('white');
+    body.setColor('black');
+    self.value = 'night';
+
+    link.setColor('blue');
+}
+```
