@@ -567,12 +567,12 @@ coworkers.showAll();
 
 ## Library & Framework
 
-- 다른 사람과 협력하는 모델
-- Library: 내가 만들고자 하는 프로그램에 필요한 부품들이 정돈되어 있는 소프트웨어
-  - 우리가 라이브러리에서 땡겨서 씀
-  - i.e. Using jQuery with a CDN (script src를 통해 우리가 가져다 쓸 수 있음)
-- Framework: 만들고자 하는 것이 무엇이냐에 따라 그것을 만들려고 할 때 필요한 공통적인 틀, 반제품 (기능과 개성에 따라 수정 가능)
-  - 프레임워크 안에 우리가 들어가서 작업함
+- Models used for collaboration
+- Library: Software that has an organized collection of codes needed for writing a certain program
+  - We take the code snippets from a library
+  - i.e. Using jQuery with a CDN (we can take the codes using `<script src = ...>`
+- Framework: A semi-finished product required to create a certain program, which can be modified according to achieve different functionalities
+  - We build our code on a framework
 
 - jQuery is a library that eases manipulation of JS 
   - i.e. Using google jQuery library
