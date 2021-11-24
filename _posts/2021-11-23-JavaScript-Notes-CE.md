@@ -79,7 +79,8 @@ categories:
 - Convenient!
   - No need to create a new html file 
   - Can work with data on any web page to suit your needs
-
+- newline within the code: shift + enter
+- `console.log(*whatever I want*);` returns the value in console
 
 
 
@@ -145,6 +146,7 @@ categories:
     
   
 - Selecting a tag to manipulate
+
 ```html
 <html>
 <body>
@@ -220,6 +222,7 @@ if (this.value === 'night') {
 ## Application of arrays and iteration
 
 - Adding the elements of an array by iterating through it
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -250,30 +253,49 @@ if (this.value === 'night') {
 </html>
 ```
 
-- Applying the concept to the button example
+- Applying the concept to the button example: change the color of html to `powderblue` for the night version
+
 ```javascript
-var target = document.querySelector('body');
-var links = document.querySelectorAll('a');
+<h1><a href="index.html">WEB</a></h1>
+<input id="night_day" type="button" value="night" onclick="
+  let target = document.querySelector('body');
+  let links = document.querySelectorAll('a');
 
-if (this.value === 'night') {
-    target.style.backgroundColor = 'black';
-    target.style.color = 'white';
-    this.value = 'day';
+  if (this.value === 'night') {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
 
-	var i = 0;
-    while (i<links.length) {
-        links[i].style.color = 'powderblue';
-        i=i+1;
-    } 
-} else {
-    target.style.backgroundColor = 'white';
-    target.style.color = 'black';
-    this.value = 'night';
-	
-	var i = 0;
-    while (i<links.length) {
-        links[i].style.color = 'powderblue';
-        i=i+1;
-    } 
-}
+      // Change the color of links
+      let i = 0;
+      while(i<links.length) {
+          links[i].style.color = 'powderblue';
+          i = i + 1;
+      }
+
+  } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+
+      // Change the color of links
+      let i = 0;
+      while(i<links.length) {
+          links[i].style.color = 'blue';
+          i = i + 1;
+      }
+  }
+">
+
+<ol >
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+</ol>
+
+<h2>JavaScript</h2>
+<p> ... </p>
 ```
+
+- .querySelector(): gets the first element by CSS selector
+- .querySelectorAll(): gets all elements (in an array) with the corresponding CSS selector 

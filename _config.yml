@@ -107,7 +107,6 @@ author:
   bio              : "Hi! I am Doyeon Guk, currently studying Computer Science in University of Melbourne, Australia.
   <br><br>I blog about my daily improvements, and sometimes some personal thoughts!"
   location         : "Seoul, Korea"
-  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -155,6 +154,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
