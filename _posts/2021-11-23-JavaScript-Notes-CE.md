@@ -371,9 +371,9 @@ function name(parameter1, parameter2, parameter3) {
 
 
 ## Objects
-- 'A storage box used to group and organize the functions and variables that are related to each other'
+- 'A storage box with a name that is used to group and organize the functions and variables that are related to each other'
+- {`key` : `value`}
 - An object can be thought of as a file directory
-- A function for an object is called a method
 
 ```javascript
 if (self.value === 'night') {
@@ -404,5 +404,198 @@ if (self.value === 'night') {
     self.value = 'night';
 
     link.setColor('blue');
+}
+```
+
+- Creating and using an object
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Objects</title>
+    </head>
+    <body>
+       <h1> Creating an Object </h1>
+        <script>
+        var coworkers = {
+            "worker1":"doyeon",
+            "worker2":"jenny"
+        };
+        document.write("worker1: " + coworkers.worker1 + "<br>"); 
+        /* . is the object access operator */
+        
+        coworkers.bookkeeper = "doho";
+        document.write("bookkeeper: " + coworkers.bookkeepper + "<br>");
+        coworkers["data scientist"] = "taeho";
+        document.write("data scientist: " + coworkers["data scientist"] + "<br>");
+        /* Adding new elements to an object */
+    	</script>
+    </body>
+</html>
+```
+
+- Iterating through an object using `key`
+
+```javascript
+for (var key in coworkers) {
+document.write(key + ' : ' + coworkers[key] + '<br>');
+}
+```
+
+- Property and method
+  - Property: a variable saved within an object
+  - Method: a function saved within an object 
+    - i.e. `document` is an object; `querySelector()` is it's method
+
+```javascript
+coworkers.showAll = function() {
+for (var key in this) {
+document.write(key + ' : ' + this[key] + '<br>');
+}
+}
+coworkers.showAll();
+// Same as function showAll() {}
+// showAll is also printed (it belongs in the object)
+```
+
+
+
+## Application of Objects
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Refactoring via functions</title>
+      <script>
+
+        var Links = {
+          setColor: function (color) {
+            let links = document.querySelectorAll('a');
+            // Change the color of a tags
+            let i = 0;
+            while (i < links.length) {
+              links[i].style.color = color;
+              i = i + 1;
+            }
+          }
+        }
+
+        var Body = {
+          setColor: function(color) {
+            document.querySelector('body').style.color = color;
+          },
+          setBackgroundColor: function(color) {
+            document.querySelector('body').style.backgroundColor = color;
+          }
+        }
+
+        function nightDayHandler(self) {
+
+          if (self.value === 'night') {
+            Body.setBackgroundColor('black');
+            Body.setColor('white');
+            self.value = 'day';
+
+            Links.setColor('powderblue');
+          } else {
+            Body.setBackgroundColor('white');
+            Body.setColor('black');
+            self.value = 'night';
+
+            Links.setColor('blue');
+          }
+        }
+      </script>
+    </head>
+    <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+        ">
+
+    <ol >
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+
+    <h2>JavaScript</h2>
+    <p> ... </p>
+    </body>
+</html>
+```
+
+
+
+## Using separate files
+- We can create a new JS file and reuse it in different html pages by referring to `src`
+- Convenient for developers; also saves cache for the browser
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Refactoring via functions</title>
+      <script src="colors.js"></script>
+    </head>
+    <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+        ">
+
+    <ol >
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+
+    <h2>JavaScript</h2>
+    <p> ... </p>
+    </body>
+</html>
+```
+
+- `colors.js` contains all JavaScript code
+
+
+
+## Library & Framework
+
+- 다른 사람과 협력하는 모델
+- Library: 내가 만들고자 하는 프로그램에 필요한 부품들이 정돈되어 있는 소프트웨어
+  - 우리가 라이브러리에서 땡겨서 씀
+  - i.e. Using jQuery with a CDN (script src를 통해 우리가 가져다 쓸 수 있음)
+- Framework: 만들고자 하는 것이 무엇이냐에 따라 그것을 만들려고 할 때 필요한 공통적인 틀, 반제품 (기능과 개성에 따라 수정 가능)
+  - 프레임워크 안에 우리가 들어가서 작업함
+
+- jQuery is a library that eases manipulation of JS 
+  - i.e. Using google jQuery library
+
+```html
+<head>
+  <title>WEB1 - HTML</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+</head>
+```
+
+- i.e. jQuery takes care of all 'a' tags via function `$('a')`
+
+```javascript
+setColor: function (color) {
+    //let links = document.querySelectorAll('a');
+    //let i = 0;
+    //while (i < links.length) {
+    //    links[i].style.color = color;
+    //    i = i + 1;
+    $('a').css('color', color);
+    // $('body').css('backgroundColor', color);
 }
 ```
