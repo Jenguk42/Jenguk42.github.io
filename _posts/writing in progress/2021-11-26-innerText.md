@@ -1,14 +1,9 @@
 ---
-title: "`document.write()` method and `Element.innerHTML` property"
+title: "`document.write()` vs `Element.innerHTML`"
 
 categories:
 - JS
-
-
 ---
-
-###### ✒ Reference: [This brilliant stack overflow question](https://stackoverflow.com/questions/4537963/what-are-alternatives-to-document-write)
-
 ## `document.write()` method
 
 ```javascript
