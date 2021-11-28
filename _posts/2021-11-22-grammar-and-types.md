@@ -5,8 +5,8 @@ categories:
 - JS
 
 ---
-###### ✒ Reference: [Grammar and types - JavaScript Guide by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types)
-###### I have excluded the syntax that are identical to those of Java.
+✒ Reference: [Grammar and types - JavaScript Guide by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types)
+<br>I have excluded the syntax that are identical to those of Java.
 
 
 
