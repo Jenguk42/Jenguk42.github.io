@@ -69,6 +69,14 @@ categories:
 ```
 > `onkeydown`: Triggers when a key is pressed
 
+- A function that returns the position of click event to console
+
+```jsx
+const onClick = (e) => {
+    console.log(e);
+}
+```
+
 
 
 ## Console
@@ -80,7 +88,7 @@ categories:
   - No need to create a new html file 
   - Can work with data on any web page to suit your needs
 - newline within the code: shift + enter
-- `console.log(*whatever I want*);` returns the value in console
+- `console.log(whatever I want);` returns the value in console
 
 
 
