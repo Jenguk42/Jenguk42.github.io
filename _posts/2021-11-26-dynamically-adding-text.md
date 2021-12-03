@@ -2,8 +2,15 @@
 title: "`document.write()` vs `Element.innerHTML`"
 
 categories:
-- JS
+- Web Development
+
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 ---
+
 ## `document.write()` method
 
 ```javascript

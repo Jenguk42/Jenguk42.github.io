@@ -2,10 +2,16 @@
 title: "What is JavaScript?"
 
 categories:
-- JS
+- Web Development
+
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 
 ---
-###### ✒ Reference: [Introduction - JavaScript by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction)
+> ✒ Reference: [Introduction - JavaScript by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction)
 
 
 

@@ -2,7 +2,13 @@
 title: "Arrow functions"
 
 categories: 
-- JS
+- Web Development
+
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 ---
 
 ## Arrow function expressions

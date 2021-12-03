@@ -2,7 +2,13 @@
 title: "`addEventListener()` vs `onclick`"
 
 categories:
-- JS
+- Web Development
+
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 ---
 
 Both `addEventListener()` and `onclick` listen for an event, and execute a callback function when a button is clicked.

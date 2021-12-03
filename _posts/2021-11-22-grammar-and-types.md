@@ -1,16 +1,21 @@
 ---
-title: "Grammar and types"
+title: "JavaScript Grammar and types"
 
 categories:
-- JS
+- Web Development
 
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 ---
-✒ Reference: [Grammar and types - JavaScript Guide by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types)
+> ✒ Reference: [Grammar and types - JavaScript Guide by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types)
 <br>I have excluded the syntax that are identical to those of Java.
 
 
 
-## Basics
+## What is JavaScript?
 
 - JS is case-sensitive and uses the Unicode character set.
 - Instructions are called **statements** and are separated by semicolons.
@@ -21,20 +26,21 @@ categories:
 - Comments are shown as below:
 ```javascript
 #!/usr/bin/env node
-// hashbang comment: specifies the path to a particular JS engine that should execute the script
+// hashbang comment: specifies the path to 
+// a particular JS engine that should execute the script
 ```
 
 
-# Declarations 
+## Declarations 
 
-## 3 kinds of variable declarations
+There are 3 kinds of variable declarations:
 1. **var**: Declares a variable, optionally initializing it to a value.
 2. **let**: Declares a **block-scoped, local variable**, optionally initializing it to a value.
 3. **const**: Declares a  **block-scoped, read-only** named constant.
    - If the keywords are omitted, the identifier is assumed to represent a variable.
 
 
-## Variables
+### Variables
 - identifiers (names of variables) have certain rules:
   - must start with a letter, (\_), or ($).
   - upper and lower case characters (case sensitive)
@@ -57,7 +63,7 @@ console.log(y);  // ReferenceError: y is not defined
 ```
 
 
-## Evaluating variables
+### Evaluating variables
 
 - A variable declared without value assignment have a value of **`undefined`**.
 - Attempt to access results in a `ReferenceError` exception
@@ -65,7 +71,7 @@ console.log(y);  // ReferenceError: y is not defined
 - boolean context: `false`; numeric context: `NaN` (`null`: boolean context `false`; numeric context `0`)
 
 
-## Variable hoisting
+### Variable hoisting
 - Hoisting: Referring to a variable declared later w/o getting an exception
 - Variables in JS are "hoisted" or "lifted" to the top of the function or statement.
 - Hoisted variables return a value of `undefined` even if you declare and initialize it after using the variable.
@@ -77,7 +83,7 @@ var x = 3;
 ```
 
 
-## Function hoisting
+### Function hoisting
 
 - Only function declarations are hoisted, not the function expressions.
 
@@ -96,14 +102,14 @@ console.log('bar2');
 ```
 
 
-## Global variables
+### Global variables
 
 - In web pages, the global object is `window`. 
 - Global variables can be accessed by `window.variable`, or specifying the `window` or `frame` name. (`windowName.varName`)
 
 
 
-## Constants
+### Constants
 
 - Created with `const` keyword
 - Initialized to a value, cannot change the value while the script is running
@@ -121,20 +127,20 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 
 
 
-# Data structures and types
+## Data structures and types
 
-## Data types
+### Data types
 
 - 7 primitive data types: Boolean, null, undefined (a top-level property whose value is not defined), Number (integer/ floating point number), BigInt (an integer with arbitrary precision, i.e. `9007727422n`), String, Symbol (a data type whose instances are unique and immutable)
 - and Object (named containers for values)
 
 
-## Data type conversion
+### Data type conversion
 
 - JS is a dynamically typed language: data types are automatically converted
 
 
-## Numbers and the '+' operator
+### Numbers and the '+' operator
 
 - JS converts numeric values to strings **only** when the expression contains numeric and string values with the `+` operator.
 
@@ -144,7 +150,7 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 ```
 
 
-## Converting strings to numbers
+### Converting strings to numbers
 
 - `parseInt()`: Always include the *radix* parameter (numerical system). Returns whole numbers.
 - `parseFloat()`: Returns decimals.
@@ -157,11 +163,11 @@ parseInt('101', 2) //5
 
 
 
-# Literals
+## Literals
 
 *Literals* represent fixed values that you "literally" provide in your script.
 
-## Array literals (= `Array` objects)
+### Array literals (= `Array` objects)
 
 - A type of object initializer
   - List of 0 or more expressions, each of which represents an array element, enclosed in `[]`
@@ -182,14 +188,14 @@ let myList = [,'home',,'school',]
 
 ---
 
-## Boolean literals
+### Boolean literals
 
 - The Boolean type has two literal values: `true` and `false`.
 - A Boolean object is a wrapper around the primitive Boolean data type.
 
 ---
 
-## Numeric literals
+### Numeric literals
 
 - Integer literals in different bases, floating-point literals in base-10
 - Numeric literals should be unsigned; `-123.4` is interpreted as a unary `-` operator applied to the numeric literal `123.4`.
@@ -207,7 +213,7 @@ let myList = [,'home',,'school',]
 
 ---
 
-## Object literals
+### Object literals
 
 - 0 or more pairs of property names and associated values of an object, enclosed in `{}`
 - Example of an object literal

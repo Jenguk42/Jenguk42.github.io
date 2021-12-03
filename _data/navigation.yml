@@ -1,11 +1,13 @@
 # main links
 main:
-  - title: "Categories"
-    url: /categories/
-  - title: "Today I Learned"
+  # - title: "Categories"
+  #   url: /categories/
+  - title: "TIL"
     url: /categories/TIL/
-  - title: "JavaScript"
-    url: /categories/JS/
+  - title: "Web Development"
+    url: /categories/WD/
+  - title: "Tags"
+    url: /tags/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

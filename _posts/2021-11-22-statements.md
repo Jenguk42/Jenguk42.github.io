@@ -1,11 +1,17 @@
 ---
-title: "Statements"
+title: "JavaScript Statements"
 
 categories:
-- JS
+- Web Development
+
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 
 ---
-###### ✒ Reference: [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration) from the Mozilla JavaScript Guide.
+> ✒ Reference: [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration) from the Mozilla JavaScript Guide.
 
 
 

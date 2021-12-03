@@ -2,8 +2,16 @@
 title: "CSS basics"
 
 categories:
-- JS
+- Web Development
+
+tags:
+- CSS
+
+toc: true
+toc_sticky: true
 ---
+> ✒ Reference: [CSS Tutorial by W3Schools](https://www.w3schools.com/css/)
+
 
 ## What is CSS?
 
@@ -39,7 +47,7 @@ h1 {
   2. External and internal style (in the head section)
   3. Browser default
 
-1. External CSS
+1. **External CSS**
 
      - The HTML page must include a reference to the external style sheet file inside the `<link>` element, inside the head section.
 
@@ -47,19 +55,21 @@ h1 {
 
      - The external CSS file should not contain any HTML tags, and must be saved with a `.css` extension.
 
-2. Internal CSS
+2. **Internal CSS**
 
      - Internal styles are defined within the `<style>` element, inside the head section.
 
      - Within head, there should be: `<style>css code here</style>`
 
-3. Inline CSS
+3. **Inline CSS**
 
      - Inline style is used to apply a unique style for a single element.
 
      - An inline style loses the advantage of a style sheet, mixing the content with the presentation.
 
      - A style attribute is added to the relevant element: `<p style="css code"></p>`
+
+
 
 ## CSS selectors
 

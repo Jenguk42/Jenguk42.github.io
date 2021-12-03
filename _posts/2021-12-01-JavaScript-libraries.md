@@ -2,7 +2,13 @@
 title: "JavaScript libraries"
 
 categories: 
-- JS
+- Web Development
+
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 ---
 
 ## What are JavaScript libraries?

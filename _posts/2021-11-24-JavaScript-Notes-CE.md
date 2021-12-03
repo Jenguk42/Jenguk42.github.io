@@ -1,12 +1,18 @@
 ---
-title: "JavaScript - CE"
+title: "JavaScript basics"
 
 categories:
-- JS
+- Web Development
+
+tags:
+- JavaScript
+
+toc: true
+toc_sticky: true
 
 ---
 
-###### ✒ This note is created based on: [JavaScript tutorial by 'Coding Everybody'](https://opentutorials.org/course/3085). 
+> ✒ This note is created based on: [JavaScript tutorial by 'Coding Everybody'](https://opentutorials.org/course/3085). 
 
 
 
@@ -470,7 +476,7 @@ coworkers.showAll();
 
 
 
-## Application of Objects
+### Application of Objects
 
 ```html
 <!DOCTYPE html>
