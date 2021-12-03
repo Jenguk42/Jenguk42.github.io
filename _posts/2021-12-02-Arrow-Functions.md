@@ -10,6 +10,7 @@ tags:
 toc: true
 toc_sticky: true
 ---
+> ✒ Reference: [MDN Web Docs - Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 ## Arrow function expressions
 
