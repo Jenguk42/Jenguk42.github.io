@@ -1,5 +1,5 @@
 ---
-title: "React JS basics"
+title: "React JS crash course"
 
 categories: 
 - Web Development
