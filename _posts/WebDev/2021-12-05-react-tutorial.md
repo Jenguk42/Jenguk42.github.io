@@ -12,7 +12,6 @@ toc_sticky: true
 ---
 > ✒ Reference: [Intro to React by ReactJS.org](https://reactjs.org/tutorial/tutorial.html)
 
-
 ## JS class constructors
 
 In JavaScript classes, you need to always call super when defining the constructor of a subclass. All React component classes that have a constructor should start with a super(props) call.
@@ -32,7 +31,6 @@ In React, it’s conventional to use `on(Event)` names for props which represent
 
 If component A maintains its own state and passes it to component B as props, then component B is a controlled component. (Component A has full control over component B.)
 
-
 ## Immutability
 
 When changing data, you can (a) mutate the data directly by changing its values or (b) replace the data with a new copy which has the desired changes.
@@ -50,15 +48,15 @@ var newPlayer = {...player, score: 2};
 ```
 
 Benefits of immutability are:
+
 1. Complex features become simple
-- Avoiding direct data mutation lets us keep the previous versions of the data, so you can reuse them later or undo and redo the actions.
+Avoiding direct data mutation lets us keep the previous versions of the data, so you can reuse them later or undo and redo the actions.
 
 2. Detecting changes
-- It is easy to detect changes in immutable objects, because you can compare the new object with its previous copy rather than traversing the entire object tree.
+It is easy to detect changes in immutable objects, because you can compare the new object with its previous copy rather than traversing the entire object tree.
 
 3. Determining when to re-render in React
-- Immutability helps you build pure components in React. Since it is easy to detect changes that are made, it is also easy to determine when a component requires re-rendering.
-
+Immutability helps you build pure components in React. Since it is easy to detect changes that are made, it is also easy to determine when a component requires re-rendering.
 
 ## Keys in React lists
 
@@ -75,3 +73,4 @@ When a list is re-rendered, keys tell React about the identity of each component
 - Keys do not need to be globally unique; they only need to be unique between components and their siblings.
 - If the list is not re-ordered, deleted, or inserted in the middle, it is safe to use the index as a key.
 - Assign proper keys whenever you build dynamic lists!
+  

@@ -10,17 +10,18 @@ tags:
 toc: true
 toc_sticky: true
 ---
+
 > ✒ Reference: [The amazing React crash course by Traversy Media](https://youtu.be/w7ejDZ8SWv8)
 
 ## What is React?
 
 React JS is a frontend library/framework that structures the "view" layer of the application. It has reusable components with their own state, It enables dynamic markup using JSX, and also interactive UIs with Virtual DOM (allows update of parts of the page without reloading)
 
-
 ## React - basic grammar
+
 ### UI Components
 
-Mindframe with React: when using React, think of your UI as a bunch of separate components. 
+Mindframe with React: when using React, think of your UI as a bunch of separate components.
 
 ```jsx
 // Function component
@@ -64,7 +65,6 @@ Hooks are functions that let us hook into the React state and lifecycle features
 
 - useContext, useReducer, useRef, etc.
 
-
 ## Creating a React app
 
 Use this link: [Create a new react app](https://reactjs.org/docs/create-a-new-react-app.html)
@@ -94,8 +94,6 @@ Optional:
 2. Adding the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) chrome extension helps you inspect the React component hierarchies!
   ![image](https://user-images.githubusercontent.com/54295374/144575295-01dec563-9ec6-4f1f-b614-4e80f9acece2.png)
 
-
-
 ## Exploring the created folder
 
 ### `package.json`
@@ -107,7 +105,7 @@ Optional:
   - And some testing libraries
   
 - Scripts
-  - "start": run the development server 
+  - "start": run the development server
   - "build": build the app into static files for production
   - "test": start the test runner
   - "eject": remove the tool and copy build dependencies, configuration files and scripts into the app directory
@@ -116,7 +114,7 @@ Optional:
 
 - The single page application that is being loaded
 
-- There is a <div> with id "root": gateway to the UI
+- There is a `<div>` with id "root": gateway to the UI
 
   ![image](https://user-images.githubusercontent.com/54295374/144356376-c68c1398-5634-4e8d-be5e-51d6e5d1a6a6.png)
 
@@ -138,8 +136,6 @@ Optional:
 
   ![image](https://user-images.githubusercontent.com/54295374/144356594-e529e58e-3a80-4153-80f1-34e32228aac5.png)
   ![image](https://user-images.githubusercontent.com/54295374/144356604-89baa66e-75c8-4255-9ab2-d5a93d0ffef3.png)
-
-
 
 ## Expressions in JSX
 
@@ -243,10 +239,10 @@ function App() {
 export default App;
 ```
 
-The title of the header (prop) is retrieved inside the component by `{props.title}`. 
-
+The title of the header (prop) is retrieved inside the component by `{props.title}`.
 
 ### Default prop
+
 We can also add a default prop like below; If the header does not have any title, the default title will show. Adding a title will overwrite the default.
 
 ```jsx
@@ -268,7 +264,6 @@ export default Header
 ```
 
 Instead of passing in the `props` object, we can destructure it and pass in the `{title}`. Then we can add `<h1>{title}</h1>` instead.
-
 
 ### Prop types
 
@@ -294,7 +289,7 @@ Once the button component is created, it can be reused by simply passing in diff
 // This is a reusable button component
 const Button = ({ color, text }) => {
     return (
-        <button style={{backgroundColor: color}} className='btn'>
+        <button style={{backgroundColor: color}}className='btn'>
             {text}
         </button>
     )
@@ -322,6 +317,7 @@ const Header = () => {
 
 ```jsx
 // Inline (double brackets)
+// The style attribute accepts a JavaScript object with camelCased properties rather than a CSS string
 <h1 style={{color: 'red', backgroundColor: 'black'}}>{title}</h1>
 
 // Adding constants
@@ -333,6 +329,7 @@ const headingStyle = {
 ```
 
 ## States
+
 ### Creating a Hook with `useState`
 
 The code below takes the `text` of each element in the `tasks` array and creates a new `Tasks` array with a `<h3>` tag and a unique id, using `.map()`.
@@ -482,7 +479,7 @@ export default Tasks
 
 ## Breaking down a component
 
-Instead of having <h3> tags for each task, we can create a `Task` component which handles each task. 
+Instead of having `<h3>` tags for each task, we can create a `Task` component which handles each task.
 
 ```jsx
 // Content of src/components/Tasks.js
@@ -523,7 +520,7 @@ export default Task
 
 ## Event delegation
 
-The function to (1) delete task and (2) toggle reminder should be within `App.js`, and the function itself should be passed into `Task.js` and `Tasks.js` as props. 
+The function to (1) delete task and (2) toggle reminder should be within `App.js`, and the function itself should be passed into `Task.js` and `Tasks.js` as props.
 
 ```jsx
 // Content of src/App.js
@@ -592,7 +589,6 @@ const Header = ({title, onAdd, showAdd}) => {
 }
 ```
 
-
 ## Some JavaScript functions
 
 - Filtering an array
@@ -636,6 +632,7 @@ const addTask = (task) => {
 ```
 
 ## Building for production
+
 Development build (local host 3000) is not optimized. We can use `npm run build` to create a production build.
 
 This creates an optimized production build, and the build folder contains the static assets of the production build. Files in `/src` are the development stuff; files in `/build` are the ones that are pushed to production and deployed.
