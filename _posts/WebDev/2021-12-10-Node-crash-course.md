@@ -539,4 +539,12 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 ```
 
-<!-- Deployment to hiroke 1:24:56-->
+## Deploy the application on Heroku
+
+Make sure to use `process.env.PORT` as the environment variable and the start script as `"node index"`.
+
+1. Install the Heroku cli
+2. Log in: `heroku login`
+3. Create an app: `heroku create`
+4. Go to `heroku.com`, then clone the repository: (i.e. `heroku git:remote -a (app name)`)
+5. Deploy the changes: `git add`, `git commit -m "commit content"`, `git push heroku main`
