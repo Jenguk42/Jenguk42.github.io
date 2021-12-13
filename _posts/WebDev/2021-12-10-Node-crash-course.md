@@ -102,7 +102,8 @@ By running `npm install --save-dev nodemon` or `npm install -D nodemon`, the pac
   "description": "Node crash course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "author": "Jen Guk",
   "license": "ISC",
@@ -114,6 +115,8 @@ By running `npm install --save-dev nodemon` or `npm install -D nodemon`, the pac
   }
 }
 ```
+
+`npm run dev` will run `nodemon index`; `npm run` will run the standard `node index`.
 
 When the code is run on a different server, you don't need to copy the `node_modules` file; you can simply run `npm install` to install all the packages that are listed in the `package.json` file.
 
@@ -415,4 +418,125 @@ logger.log('Hello');
 
 ## HTTP Example: Creating a server
 
-The bare minimum to get the server running
+```jsx
+ const http = require('http');
+
+ // Create a server object
+ http.createServer((req, res) => {
+     // Write response
+     res.write('Hello World');
+     res.end();
+ }).listen(5000, () => console.log('server running'));
+```
+
+The bare minimum to get the server running. `localhost:5000` will show `Hello World` on the browser.
+
+## Creating an actual web server
+
+Put everything together to create a web server with two pages. (`index.html` is saved in the `public` folder)
+
+```jsx
+const http = require('http');
+const path = require('path');
+const fs = require('fs');
+
+const server = http.createServer((req, res) => {
+  // console.log(req.url);
+  // If localhost:5000/about is called, req.url is /about
+
+  if(req.url === '/') {
+    // It's the index page
+    fs.readFile(path.join(__dirname, 'public', 'index.html'), (err, content) => {
+      if (err) throw err;
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(content);
+    })
+  }
+
+  if(req.url === '/api/users') {
+    // Adding a JSON object instead of html
+    const users = [
+      { 'name': 'Bob Smith', 'age': 40 },
+      { 'name': 'John Doe', 'age': 30 },
+    ];
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(users));
+  }
+});
+
+// The host decides the port, which is in the 'environment variable'
+// First look for the evironment variable, if dne then run on 5000
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+```
+
+Setting the file extensions and paths dynamic:
+
+```jsx
+const http = require("http");
+const path = require("path");
+const fs = require("fs");
+
+const server = http.createServer((req, res) => {
+
+  // Make the file path dynamic
+  let filePath = path.join(
+    __dirname,
+    "public",
+    req.url === "/" ? "index.html" : req.url
+  );
+
+  // Extension of file
+  let extname = path.extname(filePath);
+
+  // Initial content type
+  let contentType = 'text/html';
+
+  // Check ext and set content type
+  switch (extname) {
+    case '.js':
+      contentType = 'text/javascript';
+      break;
+    case '.css':
+      contentType = 'text/css';
+      break;
+    case '.json':
+      contentType = 'application/json';
+      break;
+    case '.png':
+      contentType = 'image/png';
+      break;
+    case '.jpg':
+      contentType = 'image/jpg';
+      break;
+  }
+
+  // Read file
+  fs.readFile(filePath, (err, content) => {
+    if (err) {
+      if (err.code == 'ENOENT') {
+        // Page is not found
+        fs.readFile(path.join(__dirname, 'public', '404.html'), (err, content) => {
+          res.writeHead(200, { 'Content-Type' : 'text/html' });
+          res.end(content, 'utf8');
+        })
+      } else {
+        // Error, but not ENONET: some server error
+        res.writeHead(500);
+        res.end(`Server Error: ${err.code}`);
+      }
+    } else {
+      // Success
+      res.writeHead(200, { 'Content-Type' : contentType });
+      res.end(content, 'utf8');
+    }
+  })
+});
+
+// The host decides the port, which is in the 'environment variable'
+// First look for the evironment variable, if dne then run on 5000
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+```
+
+<!-- Deployment to hiroke 1:24:56-->
