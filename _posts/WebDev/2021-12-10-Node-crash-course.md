@@ -391,7 +391,7 @@ class MyEmitter extends EventEmitter { }
 // Init object
 const myEmitter = new MyEmitter();
 
-// Create an evernt listener
+// Create an event listener
 myEmitter.on('event', () => console.log('Event Fired!'));
 
 // Init event
