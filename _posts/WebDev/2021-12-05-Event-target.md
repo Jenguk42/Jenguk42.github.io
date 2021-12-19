@@ -43,13 +43,14 @@ ul.addEventListener('click', hide, false);
 ```
 
 > **Using `e.preventDefault`**
-> The `preventDefault()` method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur. 
+> The `preventDefault()` method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 > This can be useful when:
+>
 > - Clicking on a "Submit" button, prevent it from submitting a form
 > - Clicking on a link, prevent the link from following the URL
 
-
 ## Event Target properties
+
 There are three target properties defined in the DOM Event Interface.
 
 1. `event.target`
