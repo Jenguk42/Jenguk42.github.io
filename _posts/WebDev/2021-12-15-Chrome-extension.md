@@ -6,7 +6,7 @@ categories:
 
 tags:
 - Chrome Extension
-- 
+
 toc: true
 toc_sticky: true
 ---
