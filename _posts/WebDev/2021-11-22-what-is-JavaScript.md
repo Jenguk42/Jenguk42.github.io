@@ -13,9 +13,7 @@ toc_sticky: true
 ---
 > ✒ Reference: [Introduction - JavaScript by Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction)
 
-
-
-## What is JavaScript? 
+## What is JavaScript?
 
 - A **cross-platform, object-oriented scripting language** to make webpages interactive
 - Connects the objects of its environment to provide programmatic control inside a host environment.
@@ -26,8 +24,8 @@ toc_sticky: true
 ## JS  and Java
 
 - JS follows most Java expression syntax, naming conventions, and basic control-flow constructs.
-- Java 
-  - compile-time system of classes built by declarations 
+- Java
+  - compile-time system of classes built by declarations
 - JS
   - Runtime system based on smaller sets of data types
   - Prototype-based object model (dynamic inheritance: what is inherited can vary for individual objects)
@@ -67,4 +65,3 @@ greetMe('World');
 ```
 
 - `(function(){"use strict";` prevents semantics in JavaScript, and prevents code snippets executed in the console from interacting with one-another
-
