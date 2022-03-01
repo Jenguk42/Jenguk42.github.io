@@ -7,6 +7,7 @@ taxonomy: Web Development
 ---
 
 These are some notes about web development, including:
+
 - HTML
 - CSS
 - JavaScript
