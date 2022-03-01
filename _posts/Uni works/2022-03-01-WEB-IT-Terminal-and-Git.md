@@ -1,5 +1,5 @@
 ---
-title: "Terminal and Git (W1)"
+title: "Terminal and Git (INFO30005 W1)"
 
 categories: 
 - Uni works

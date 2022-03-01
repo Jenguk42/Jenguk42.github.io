@@ -6,7 +6,7 @@ main:
     url: /categories/Uni/
   - title: "TIL"
     url: /categories/TIL/
-  - title: "Web Development"
+  - title: "Web Dev"
     url: /categories/WD/
   - title: "Tags"
     url: /tags/
