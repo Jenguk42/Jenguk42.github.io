@@ -12,4 +12,3 @@ These are notes taken in 2022 semester 1, for:
 - Artificial Intelligence (COMP30024)
 - Machine Learning (COMP30027)
 - WEB IT (INFO30005)
-
