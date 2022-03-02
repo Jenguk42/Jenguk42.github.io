@@ -12,7 +12,7 @@ toc: true
 toc_sticky: true
 ---
 
-We need to understand the ecosystem of where our application is running. Running too slow? Know where to optimize it
+<mark style='background-color: #fff5b1'> We need to understand the ecosystem of where our application is running. Running too slow? Know where to optimize it. </mark>
 
 What hardware and software components are involved between recording a video and getting it to viewers?
 
@@ -47,11 +47,11 @@ What hardware and software components are involved between recording a video and
 - Network interfaces
 - I/O devices
 
-*These are hardwares. OS seamlessly takes care of everything!*
+<mark style='background-color: #fff5b1'> These are hardwares. OS seamlessly takes care of everything! </mark>
 
 ## Operating systems
 
-*OS is a layer in between the hardware and the software.*
+<mark style='background-color: #fff5b1'> OS is a layer in between the hardware and the software. </mark>
 
 Examples: Windows, macOS, Unix, Linux, Android... GUI or a command line shell is not an operating system.
 
@@ -61,14 +61,14 @@ Examples: Windows, macOS, Unix, Linux, Android... GUI or a command line shell is
 ![1](https://user-images.githubusercontent.com/54295374/156156789-9dbdf43b-5d9b-4985-a1c1-18efcd25f5c0.png)
 
 - OS as a **2. resource manager**
-  - *Managing: ensuring that the software get their CPU time, all being run*
+  - <mark style='background-color: #fff5b1'> Managing: ensuring that the software get their CPU time, all being run </mark>
   - Top down view
     - Provide <u>abstractions to application programs</u>
   - Bottom up view
     - <u>Manage pieces of complex system</u>
   - Alternative view
     - Provide <u>orderly, controlled allocation of resources</u>
-    - *Isolation of the memory given to different programs?*
+    - <mark style='background-color: #fff5b1'> Isolation of the memory given to different programs? </mark>
 
 - OS as an **3. extended machine**
   - OS turns ugly hardware into beautiful abstractions.
@@ -104,7 +104,7 @@ Examples: Windows, macOS, Unix, Linux, Android... GUI or a command line shell is
     - The values of all the variables in memory and registers
     - Address of the current instruction
     - Current directory, etc.
-  - Act of cooking (=process) is dynamic <-> A recipe is a static entity (=program)
+  - <mark style='background-color: #fff5b1'> Act of cooking (=process) is dynamic <-> A recipe is a static entity (=program) </mark>
 
 ## Typical memory hierarchy
 
