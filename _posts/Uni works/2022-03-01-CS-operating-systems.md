@@ -1,5 +1,5 @@
 ---
-title: "Operating Systems (COMP30023 W1)"
+title: "Operating Systems (COMP30023 W1 L1,2)"
 
 categories: 
 - Uni works

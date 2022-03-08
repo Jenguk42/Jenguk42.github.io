@@ -1,5 +1,5 @@
 ---
-title: "What is AI? (COMP30024 W1)"
+title: "What is AI? (COMP30024 W1 L1)"
 
 categories: 
 - Uni works

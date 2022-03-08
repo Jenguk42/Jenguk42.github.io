@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Machine Learning (COMP30027 W1)"
+title: "Introduction to Machine Learning (COMP30027 W1 L1)"
 
 categories: 
 - Uni works
