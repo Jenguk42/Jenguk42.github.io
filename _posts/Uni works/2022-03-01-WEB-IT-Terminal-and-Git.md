@@ -96,7 +96,7 @@ Best practices:
       3. git --branches="feature/\*"
 
 7. Take extra backups outside of Git
-8. Agree on workflow
+8. Agree on workflow (get together)
 9. Learn Git as a team
 
 ## Teamwork via git
@@ -127,7 +127,7 @@ When the changes are not on the same line (or same file)
 
 ## Git Demo 3. Concurrent edits, with conflict
 
-Working on the same line & same file
+Working on the same line & same file: automatic merge is not possible, need to resolve conflict with teammates
 
 - A edits the file
 - At the same time, B edits the same part of the file
