@@ -113,23 +113,42 @@ Can be created by any of the devices. What happens next depends on the devices. 
 
 ## Threads 
 
-- "Lightweight process"
-- Definition: A sequential execution stream within the process
-- Threads are the basic unit of CPU utilization – including the program counter, register set and stack space.
+*When the forked child process changes its variables, the change cannot be seen by the parent. However, sometimes you want to execute parallel code. (i.e. edit values based on different inputs, etc.)*
 
-- Threads can communicate with each other without invoking the kernel – threads share global variables and dynamic memory.
-- Shared by threads:
-  - address space and memory – code and data sections; contents of memory (global variables, heap); open files; child processes; signal and signal handlers.
-- Threads own copy:
-  - program counter; registers; stack (local variables, function call stack); state (running/waiting etc).
+- Thread: "Lightweight process" that *creates parallelism*
+  - A single process may have multiple threadsp
+- Definition: A sequential execution stream within the process
+- Threads are the basic unit of CPU utilization
+  - It has its own program counter, register set and stack space.
+  - *They have their own information on how they execute; can call their own functions, etc. Exist different from the other threads.*
+  - A proess is already a thread
+<br><br>
+
+- Threads can communicate with each other without invoking the kernel – **threads share global variables and dynamic memory**.
+  - *Any communication between processes have to go via system calls made by operating system. (In order to invoke a system call, you need to switch from user to kernel mode)*
+    - *Threads do not require this because they share dynamic memory. It is created within a process.*
+  - Shared by threads:
+    - Address space and memory – code and data sections; contents of memory (global variables, heap); open files; child processes; signal and signal handlers.
+  - Threads have their own copy of:
+    - program counter; registers; stack (local variables, function call stack); state (running/waiting etc).
+    - *State of each functions is saved in the stack.*
+
 
 - Thread usage: Text Editor
 ![image](https://user-images.githubusercontent.com/54295374/157153465-3fe04597-b216-4626-9b20-0d32facbd7ff.png)
+  - *Editing a huge file*
+    - *There is a thread for the UI that's reading the file*
+    - *Another thread is created for the substitution of words*
+    - *Another thread is created for updating the file at disk*
+    - *Three threads running in parallel!*
+    - *They are sharing local states, which allows them to exist together*
 
 ## Threads vs. Processes
 
 ![image](https://user-images.githubusercontent.com/54295374/157153650-52216472-66c1-401d-b90b-8050f210dc50.png)
 
+- *Having thread is more efficient than processes*
+  - *Main reason: OS is not involved in the creation of threads*
 - A process has one container but may have more than one thread, and each thread can perform computations (almost) independently of the other threads in the process.
 
 - There is reduced overhead than when using multiple processes:
@@ -143,20 +162,25 @@ Can be created by any of the devices. What happens next depends on the devices. 
 ![image](https://user-images.githubusercontent.com/54295374/157153783-93180c62-45ba-4f32-9e5d-c4a2fc237969.png)
 
 - A POSIX (Portable Operating System Interface) standard API for thread creation and synchronisation. Most UNIX systems support it.
+  - User level library
   - all functions start with `pthread`
-  – include `pthread.h`
-  – all threads have an id of type `thread_t`
+  - include `pthread.h`
+  - all threads have an id of type `thread_t`
 
 - Global variables are shared across threads.
   - thread switches could occur at any point
   - thus, another thread could modify shared data at any time
-  - consequently, there is a need to synchronize threads – if not, problems could arise.
+  - consequently, there is a need to **synchronize** threads – if not, problems could arise. (if two threads are modified at the same time, which is right?)
 
 ## Implementing Threads in user space
 
 A user-level threads package vs a threads package managed by the kernel
 
 ![image](https://user-images.githubusercontent.com/54295374/157154001-b1d6891b-f152-46da-832a-533e1513b4ad.png)
+
+- From the kernel: there are no threads, there is only a single process. CPU does not know which thread is being executed.
+  - Possible problem: If the process is blocked, all threads within the process also cannot run even if they logically can be executed.
+- The package (library) manages the threads instead of the CPU 
 
 ## Challenge of multi-threading
 
@@ -165,3 +189,12 @@ A user-level threads package vs a threads package managed by the kernel
   - Race conditions: where the output is dependent on the sequence/timing of events
   - Deadlock: each thread is waiting for another thread to complete a task
 - Requires locks, synchronization, and careful analysis
+
+## Recap
+
+- Processes and their lifetime
+  - How they are created, terminated, and what happens inbetween
+- Processes can be interrupted by the OS
+  - i.e. I/O device
+- Threads
+  - Adds more parallelism to the program

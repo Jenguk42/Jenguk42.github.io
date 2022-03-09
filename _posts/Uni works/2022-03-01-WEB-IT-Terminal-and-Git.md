@@ -98,3 +98,41 @@ Best practices:
 7. Take extra backups outside of Git
 8. Agree on workflow
 9. Learn Git as a team
+
+## Teamwork via git
+
+- There are many git workflows that teams can use
+- Demo below are based on the 'centralized workflow'
+
+## Git Demo 1. Team edits the same file, serially
+
+- Set up team repo on Github
+- Team members each clone the repo
+- A makes a file, commits and pushes
+- B pulls the work the work to her laptop
+- B makes edits, commits and pushes
+- A pulls the new edits
+- The team are in sync
+
+## Git Demo 2. Concurrent edits, no conflict
+
+When the changes are not on the same line (or same file)
+
+- A edits the file
+- B edits the file
+- A commits and pushes
+- B commits and tries to push: ERROR
+- B pulls A's edits - automatic merge by Git
+- B can now push his edits
+
+## Git Demo 3. Concurrent edits, with conflict
+
+Working on the same line & same file
+
+- A edits the file
+- At the same time, B edits the same part of the file
+- A commits and pushes
+- B commits and tries to push: CONFLICT
+- B manually resolves the conflict
+- B can now commit and push his edits
+- A pulls the new edits
