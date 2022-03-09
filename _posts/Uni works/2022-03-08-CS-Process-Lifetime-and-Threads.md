@@ -70,6 +70,8 @@ Three states a process may be in:
 
 ## Interrupts
 
+Can be created by any of the devices. What happens next depends on the devices. (device: "I need an attention from the OS")
+
 ![image](https://user-images.githubusercontent.com/54295374/157152407-b86f8648-ec1d-4daa-8400-0753c927cbfd.png)
 
 - The steps in starting an I/O device and getting an interrupt:
@@ -79,12 +81,13 @@ Three states a process may be in:
 - When a hardware device needs attention from the CPU, e.g. because it has finished carrying out its current command and is ready to receive its next command, it generates a signal to interrupt the CPU.
 - Asynchronous with the currently executing process
 - When an interrupt occurs, the CPU’s hardware takes the values in the program counter and program status word registers (and, on some kinds of machines, the stack pointer register), and saves them in privileged memory locations reserved for this purpose.
+  - Copy and remember the state of the process, then load the interrupt handler
 - It then replaces them with new values.
 - The replacement PSW will put the CPU into kernel mode. The replacement PC will cause execution to resume at the start of the interrupt handler, code that is part of the kernel.
 
 ## Interrupt vector and handler
 
-- Interrupt vector: address of the interrupt handler
+- Interrupt vector: address of the interrupt handler (where the process is stopped)
 - The interrupt handler must
     - save the rest of the status of the current process,
     - service the interrupt,
@@ -97,7 +100,7 @@ Three states a process may be in:
 - User programs may generate pseudo-interrupts inadvertently, e.g. by executing divide-by-zero: 
   - Such events are usually called exceptions. Some exceptions cause process termination.
 - Users can generate pseudo-interrupts intentionally by executing a special instruction for system calls (e.g., CTRL-C)
-- Catch interrupts with trap command
+- Catch interrupts with trap command (helps you choose which interrupt to catch)
 
 ## Process Table
 
