@@ -116,7 +116,7 @@ Can be created by any of the devices. What happens next depends on the devices. 
 *When the forked child process changes its variables, the change cannot be seen by the parent. However, sometimes you want to execute parallel code. (i.e. edit values based on different inputs, etc.)*
 
 - Thread: "Lightweight process" that *creates parallelism*
-  - A single process may have multiple threadsp
+  - A single process may have multiple threads
 - Definition: A sequential execution stream within the process
 - Threads are the basic unit of CPU utilization
   - It has its own program counter, register set and stack space.
