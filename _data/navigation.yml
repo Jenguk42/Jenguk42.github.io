@@ -8,6 +8,8 @@ main:
     url: /categories/TIL/
   - title: "Web Dev"
     url: /categories/WD/
+  - title: "App Dev"
+    url: /categories/AD/
   - title: "Tags"
     url: /tags/
   # - title: "About"
