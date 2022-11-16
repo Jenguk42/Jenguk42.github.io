@@ -1,5 +1,5 @@
 ---
-title: "Flutter Basics"
+title: "Flutter AppBar"
 
 categories:
 - App Development
@@ -10,5 +10,3 @@ tags:
 toc: true
 toc_sticky: true
 ---
-
-## What is a Flutter?
