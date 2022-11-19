@@ -1,5 +1,5 @@
 ---
-title: "Flutter Styling"
+title: "Layout Styling"
 
 categories:
 - App Development
