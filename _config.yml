@@ -106,16 +106,16 @@ analytics:
 author:
   name             : "Doyeon Guk"
   avatar           : "/assets/images/profile-pic.jpg"
-  bio              : "Hi! I am Doyeon Guk, currently studying Computer Science in University of Melbourne, Australia.
-  <br><br>I blog about my daily improvements, and sometimes some personal thoughts!"
-  location         : "Seoul, Korea"
+  bio              : "Hi! I am Doyeon Guk, a recent BSci Software Engineering graduate of University of Melbourne, Australia.
+  <br><br>I blog about my daily improvements!"
+  location         : "Melbourne, Australia"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:doyeonguk42@email.com
-    - label: "Website"
+    - label: "A cool extension I made"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://chrome.google.com/webstore/detail/band-member-extrator-v2/oofabaencccahklomcnclonickceffaa"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
