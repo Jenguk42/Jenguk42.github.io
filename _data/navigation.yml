@@ -2,8 +2,8 @@
 main:
   # - title: "Categories"
   #   url: /categories/
-  - title: "Uni Works"
-    url: /categories/Uni/
+  - title: "Java"
+    url: /categories/JAVA/
   - title: "TIL"
     url: /categories/TIL/
   - title: "Web Dev"
