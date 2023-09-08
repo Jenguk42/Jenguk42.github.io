@@ -8,10 +8,10 @@ main:
     url: /categories/TIL/
   - title: "Web Dev"
     url: /categories/WD/
-  - title: "App Dev"
-    url: /categories/AD/
   - title: "Tags"
     url: /tags/
+  - title: "Coding Challenges"
+    url: /categories/CC/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
