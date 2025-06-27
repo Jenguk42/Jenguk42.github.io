@@ -1,5 +1,5 @@
 ---
-title: "Korean Society Digital Membership Card Project – Progress Log"
+title: "Korean Society Digital Membership Card Project Overview"
 
 categories:
 - Database Project
@@ -48,17 +48,6 @@ korean-pass/
 - Proposal document written and shared
 - MySQL selected as database
 - Decided to use Flask (first time using it!)
-
-### 📅 2025-06-27 – Core Backend Functionality Completed
-
-- Flask development environment successfully set up
-- MySQL koreanpass database and members table created in Workbench
-- `/register` API implemented with full POST request handling
-- QR code generation implemented using qrcode and uuid
-- QR image files successfully saved to `static/qrcodes/`
-- Registration tested successfully using Postman
-- Dummy data cleared from the DB using `TRUNCATE`
-- Environment variable configuration added using `.env` + `python-dotenv`
 
 ---
 
