@@ -12,8 +12,8 @@ main:
     url: /tags/
   - title: "Coding Challenges"
     url: /categories/CC/
-  - title: "IELTS Speaking"
-    url: /categories/IELTS/
+  - title: "Database Project"
+    url: /categories/DB
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
