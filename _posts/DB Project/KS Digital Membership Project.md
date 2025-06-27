@@ -1,5 +1,5 @@
 ---
-title: "Korean Association Digital Membership Card Project – Progress Log"
+title: "Korean Society Digital Membership Card Project – Progress Log"
 
 categories:
 - Database Project
@@ -10,7 +10,7 @@ toc_sticky: true
 
 ## ✨ Project Overview
 
-This project aims to replace the Korean Association’s current spreadsheet-based membership management system with a digital solution.  
+This project aims to replace the Korean Society's current spreadsheet-based membership management system with a digital solution.  
 Members will receive a QR-code-based digital membership card that can be added to Apple Wallet and Google Wallet.  
 The system will be officially launched at the Flea Market on August 24, 2025, with live issuance on-site.
 
@@ -42,12 +42,23 @@ korean-pass/
 
 ## 🔨 Progress Log
 
-### 📅 2025-06-27 – Project Initiation
+### 📅 2025-06-26 – Project Initiation
 
 - GitHub repository created
 - Proposal document written and shared
 - MySQL selected as database
 - Decided to use Flask (first time using it!)
+
+### 📅 2025-06-27 – Core Backend Functionality Completed
+
+- Flask development environment successfully set up
+- MySQL koreanpass database and members table created in Workbench
+- `/register` API implemented with full POST request handling
+- QR code generation implemented using qrcode and uuid
+- QR image files successfully saved to `static/qrcodes/`
+- Registration tested successfully using Postman
+- Dummy data cleared from the DB using `TRUNCATE`
+- Environment variable configuration added using `.env` + `python-dotenv`
 
 ---
 
