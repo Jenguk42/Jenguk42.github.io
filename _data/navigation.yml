@@ -1,19 +1,19 @@
 # main links
 main:
-  # - title: "Categories"
-  #   url: /categories/
-  - title: "Java"
-    url: /categories/JAVA/
+  - title: "Categories"
+    url: /categories/
+  - title: "Database Project"
+    url: /categories/DB
+  # - title: "Java"
+  #   url: /categories/JAVA/
   - title: "TIL"
     url: /categories/TIL/
   - title: "Web Dev"
     url: /categories/WD/
-  - title: "Tags"
-    url: /tags/
-  - title: "Coding Challenges"
-    url: /categories/CC/
-  - title: "Database Project"
-    url: /categories/DB
+  # - title: "Tags"
+  #   url: /tags/
+  # - title: "Coding Challenges"
+  #   url: /categories/CC/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
