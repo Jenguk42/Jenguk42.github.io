@@ -9,14 +9,14 @@ toc_sticky: true
 
 ## ✅ Data Cleaning & Import Process (Members + Payments)
 
-### 🔄 CSV 인코딩 변환
-- `members.csv`와 `payments.csv`가 UTF-8 인코딩으로 저장되어 있었으나, MySQL Workbench는 기본적으로 CP949/ANSI로 해석하려고 하여 오류 발생
-- `utf-8-sig` (UTF-8 with BOM) 형식으로 변환하여 문제 해결:
+### 🔄 CSV Encoding Conversion
+- `members.csv` and `payments.csv` were originally saved in UTF-8, but MySQL Workbench tried to interpret them using CP949/ANSI by default, causing decoding errors.
+- Converted both files to `utf-8-sig` (UTF-8 with BOM) format to ensure compatibility:
   - `members_final_hashed_pw.csv` → `members_final_hashed_pw_bom.csv`
   - `payments.csv` → `payments_bom.csv`
 
-### ✅ MySQL 테이블 구조 변경
-- `members` 테이블 구조 정리 및 확장:
+### ✅ MySQL Table Structure Updates
+- Revised and expanded the `members` table structure:
   ```sql
   CREATE TABLE members (
       id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -38,7 +38,7 @@ toc_sticky: true
   );
   ```
 
-- `payments` 테이블 생성:
+- Created the `payments` table:
   ```sql
   CREATE TABLE payments (
       payment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -53,8 +53,8 @@ toc_sticky: true
   );
   ```
 
-### ✅ 트리거 생성
-- 새 결제가 들어올 때 `members.expiry_date` 자동 갱신되도록 트리거 설정:
+### ✅ Trigger Setup
+- Added a trigger to automatically update `members.expiry_date` when a new payment is inserted:
   ```sql
   CREATE TRIGGER update_expiry_after_payment
   AFTER INSERT ON payments
@@ -70,9 +70,9 @@ toc_sticky: true
   END;
   ```
 
-### ✅ 데이터 삽입
-- MySQL Workbench의 Import Wizard는 인코딩 문제로 실패
-- 대신 명령줄에서 `LOAD DATA LOCAL INFILE`을 사용하여 CSV 직접 import:
+### ✅ Data Import
+- MySQL Workbench Import Wizard failed due to encoding issues.
+- Used command line to import CSV directly via `LOAD DATA LOCAL INFILE`:
   ```sql
   LOAD DATA LOCAL INFILE 'C:/.../members.csv'
   INTO TABLE members
@@ -83,7 +83,7 @@ toc_sticky: true
   FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 ROWS;
   ```
 
-- 외래 키 오류 발생 시, 누락된 `member_id` 확인:
+- When foreign key constraint errors occurred, identified missing `member_id` values with:
   ```sql
   SELECT p.member_id
   FROM payments p
@@ -94,7 +94,7 @@ toc_sticky: true
 ---
 
 ## 📌 Summary
-- CSV 인코딩 문제 해결 및 UTF-8 with BOM 저장
-- 트리거로 `expiry_date` 자동 관리 설정
-- CLI에서 `LOAD DATA LOCAL INFILE`로 데이터 삽입 성공
-- RDS 접속 후 문제 없이 적용 완료
+- Resolved CSV encoding issues by converting to UTF-8 with BOM
+- Implemented trigger for automated expiry date updates
+- Successfully inserted data using CLI and `LOAD DATA LOCAL INFILE`
+- Completed RDS import and structure update
