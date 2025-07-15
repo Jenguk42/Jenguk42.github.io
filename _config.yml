@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Stuff I learned"
+title                    : "While (true) Blog" # site title that appears in the masthead
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Doyeon Guk"
-description              : "A smol programming blog to record my day to day learning!"
+description              : "A smol programming blog to record my day to day improvements!"
 url                      : "https://jenguk42.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/jenguk42/jenguk42.github.io"
@@ -106,8 +106,7 @@ analytics:
 author:
   name             : "Doyeon Guk"
   avatar           : "/assets/images/profile-pic.jpg"
-  bio              : "Hi! I am Doyeon Guk, a recent BSci Software Engineering graduate of University of Melbourne, Australia.
-  <br><br>I blog about my daily improvements!"
+  bio              : "Hi! I'm Doyeon Guk — an ICT Trainer, Database Administrator, and Cybersecurity Specialist based in Melbourne, Australia. <br> I hold a Graduate Diploma in IT and a Bachelor's in Software Engineering from the University of Melbourne. I currently teach Advanced Diploma of IT units at Danford College, where I combine academic expertise with hands-on industry experience to support students in cybersecurity, network systems, project management, and database design.<br> Beyond teaching, I’ve led real-world database migration and security projects for SMEs — including role-based access control, MySQL optimisation, MFA rollouts, and cloud-integrated QR systems. I'm passionate about simplifying complex systems, enhancing digital security, and creating tools that serve communities — from education to cultural organisations.<br> In between code and lectures, I’m also building solutions that connect people — like a digital membership system for the Korean Association.<br> When I’m not coding or teaching, you can find me exploring Melbourne’s vibrant tech scene, enjoying a good book, or sharing insights on my blog. Let’s connect and make the digital world a safer, more accessible place!"
   location         : "Melbourne, Australia"
   links:
     - label: "Email"
