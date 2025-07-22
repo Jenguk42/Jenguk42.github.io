@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Doyeon Guk"
   avatar           : "/assets/images/profile-pic-2.jpg"
-  bio              : "Hi! I'm Doyeon Guk — an ICT Trainer, Database Administrator, and Cybersecurity Specialist based in Melbourne, Australia. <br> I currently teach Advanced Diploma of IT units at Danford College, where I combine academic expertise with hands-on industry experience to support students in cybersecurity, network systems, project management, and database design.<br> In between code and lectures, I’m also building solutions that connect people — like a digital membership system for the Korean Association."
+  bio              : "Hi! I'm Doyeon Guk — an ICT Trainer & IT System Administrator based in Melbourne, Australia. <br> I teach Advanced Diploma of IT at Danford College, where I combine academic expertise with hands-on industry experience to support students in cybersecurity, network systems, and project management.<br> In between code and lectures, I’m also building solutions that connect people — like a digital membership system for the Korean Association."
   location         : "Melbourne, Australia"
   links:
     - label: "Email"
